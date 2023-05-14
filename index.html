@@ -33,7 +33,7 @@
         card_images.push({no: 1, src: i+'.png'});
     }
     card_images.forEach((item, index)=>{
-        $('.container').append(`
+        $('body').append(`
             <div class="draggable card" 
             card-no="${index+1}" 
             style="
