@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <div class="container">
+
+
+    </div>
+  </body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+    $( function() {
+      $( ".draggable").draggable();
+    } );
+
+    const card_images = []
+    const number_of_cards = 15;
+    for(i=1;i<=number_of_cards;i++){
+        card_images.push({no: 1, src: i+'.png'});
+    }
+    card_images.forEach((item, index)=>{
+        $('.container').append(`
+            <div class="draggable card" 
+            card-no="${index+1}" 
+            style="
+                background-image:url('./img/${index+1}.png'); 
+                background-size: contain;  
+                "></div>
+        `)
+    });  
+</script>

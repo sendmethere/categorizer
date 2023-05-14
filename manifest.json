@@ -1,0 +1,17 @@
+{
+  "name": "동물 분류하기",
+  "description": "동물 분류하기.",
+  "version": "0.1",
+  "manifest_version": 3,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "icons": { "16": "animal-16.png", "128": "animal-128.png" }
+}

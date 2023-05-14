@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+
+    background-image: url('./img/bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;  
+}
+
+.container {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #666;
+    width: calc(8%);
+    aspect-ratio: 1 / 1;
+    filter:opacity(0.9);
+}
+
+.card:hover{
+    filter: brightness(0.95);
+    cursor: pointer;
+}
