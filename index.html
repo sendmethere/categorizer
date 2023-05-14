@@ -16,7 +16,15 @@
 <script src="jquery.ui.touch-punch.js"></script>
 <script>
     $( function() {
-      $( ".draggable").draggable({containment: "parent"});
+      $( ".draggable").draggable({containment: "parent"}).touch({
+    animate: false,
+    sticky: false,
+    dragx: true,
+    dragy: true,
+    rotate: false,
+    resort: true,
+    scale: false
+});
     } );
 
     const card_images = []
