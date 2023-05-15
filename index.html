@@ -15,28 +15,11 @@
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="jquery.ui.touch-punch.js"></script>
 <script>
+      
     $( function() {
-      $( ".draggable").on("mousedown", function(e) {
-        var touch = e.touches[0];
-        var x = touch.clientX;
-        var y = touch.clientY
-        
-        $(this).data("startX", x);
-        $(this).data("startY", y);
-    });
-      
-      $( ".draggable").on("mousemove", function(e) {
-        var touch = e.touches[0];
-        var x = touch.clientX;
-        var y = touch.clientY
-        
-      $(this).css({
-        left: x - $(this).data("startX") + "px",
-        top: y - $(this).data("startY") + "px"
-        });    
-      });
-    });
-      
+      $( ".draggable").draggable({containment: "parent"});
+    } );
+  
     const card_images = []
     const number_of_cards = 15;
     for(i=1;i<=number_of_cards;i++){
