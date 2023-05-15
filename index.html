@@ -37,18 +37,20 @@
       });
 
       $( ".draggable").on("touchstart", function(e) {
+        e.preventDefault();
         var touch = e.touches[0];
-        var x = touch.clientX;
-        var y = touch.clientY
+        var x = touch.pageX;
+        var y = touch.pageY;
         
         $(this).data("startX", x);
         $(this).data("startY", y);
     });
       
-      $( ".draggable").on("touchend", function(e) {
+      $( ".draggable").on("touchmove", function(e) {
+        e.preventDefault();
         var touch = e.touches[0];
-        var x = touch.clientX;
-        var y = touch.clientY
+        var x = touch.pageX - this.startX;
+        var y = touch.pageY - this.startY;
         
       $(this).css({
         left: x - $(this).data("startX") + "px",
