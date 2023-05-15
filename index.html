@@ -36,6 +36,26 @@
         });    
       });
 
+      $( ".draggable").on("touchstart", function(e) {
+        var touch = e.touches[0];
+        var x = touch.clientX;
+        var y = touch.clientY
+        
+        $(this).data("startX", x);
+        $(this).data("startY", y);
+    });
+      
+      $( ".draggable").on("touchend", function(e) {
+        var touch = e.touches[0];
+        var x = touch.clientX;
+        var y = touch.clientY
+        
+      $(this).css({
+        left: x - $(this).data("startX") + "px",
+        top: y - $(this).data("startY") + "px"
+        });    
+      });
+      
     const card_images = []
     const number_of_cards = 15;
     for(i=1;i<=number_of_cards;i++){
