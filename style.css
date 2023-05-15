@@ -8,6 +8,10 @@ body {
     background-size: contain;  
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     overflow: hidden;
     height: 100%;
